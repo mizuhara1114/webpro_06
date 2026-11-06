@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>京葉線の駅一覧</title>
+</head>
+<body>
+  <h1>京葉線の駅一覧</h1>
+
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>駅コード</th>
+      <th>駅名</th>
+    </tr>
+
+    <% data.forEach(function(station) { %>
+      <tr>
+        <td><%= station.id %></td>
+        <td><%= station.code %></td>
+        <td><%= station.name %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
