@@ -58,6 +58,17 @@ app.post("/keiyo_add", (req, res) => {
   res.redirect("/keiyo");
 });
 
+
+
+app.get("/songs", (req, res) => {
+  let songs = [
+  { id: 1, title: "シャンデリアワルツ", artist: "UNISON SQUARE GARDEN", genre: "ロック" },
+  { id: 2, title: "アルクアラウンド", artist: "サカナクション", genre: "ロック" },
+  { id: 3, title: "メーデー", artist: "BUMP OF CHiCKEN", genre: "ロック" }
+  ];
+  res.render("song", { data: songs });
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
